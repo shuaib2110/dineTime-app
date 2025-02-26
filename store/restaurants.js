@@ -242,6 +242,7 @@ const carouselImages = [
     res_id: "/restaurants/restaurant_12",
   },
 ];
+
 const slots = [
   {
     ref_id: "/restaurants/restaurant_1",
