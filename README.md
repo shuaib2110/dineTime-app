@@ -20,14 +20,12 @@
 - **React Navigation**
 - **Context API** for state management
 - **Custom Components & Styles**
-- Centralized styling via `assets/colors.js`
+- Centralized styling via `constant/colors.js`
 
 ---
 
 ## 📂 Project Structure
-
-
-<!-- WHEN COMPLETE -->
+-->  WHEN COMPLETE 
 
 👤 Author
 
