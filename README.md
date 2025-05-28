@@ -26,3 +26,17 @@
 
 ## 📂 Project Structure
 
+
+<!-- WHEN COMPLETE -->
+
+👤 Author
+
+Shuaib Ahmad
+
+🔗 Portfolio: shuaibfolio.netlify.app/shuaib2110
+
+🐙 GitHub: github.com/shuaib2110
+
+📧 Email: shuaibdevloper@gmail.com
+
+📺 Linkedin: @shuaib2110
