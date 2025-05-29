@@ -14,9 +14,9 @@ import logo from "../../assets/images/dinetimelogo.png";
 import validationSchema from "../../utils/authSchema";
 const entryImg = require("../../assets/images/Frame.png");
 
-const Signup = () => {
+const Signin = () => {
     const router = useRouter();
-    const handleSignup = () => { };
+    const handleSignin = () => { };
 
     return (
         <SafeAreaView className={`bg-[#2b2b2b]`}>
@@ -26,12 +26,11 @@ const Signup = () => {
                     <Text className="text-lg text-center text-white font-bold mb-10">
                         Let&apos;s get you started
                     </Text>
-
                     <View className="w-5/6">
                         <Formik
                             initialValues={{ email: "", password: "" }}
                             validationSchema={validationSchema}
-                            onSubmit={handleSignup}
+                            onSubmit={handleSignin}
                         >
                             {({
                                 handleChange,
@@ -73,16 +72,16 @@ const Signup = () => {
                                         className="p-2 my-2 bg-[#f49b33] text-black rounded-lg mt-10"
                                     >
                                         <Text className="text-lg font-semibold text-center">
-                                            Sign Up
+                                            Sign in
                                         </Text>
                                     </TouchableOpacity>
                                 </View>
                             )}
                         </Formik>
                         <View className="flex justify-center items-center mt-5 p-2">
-                            <TouchableOpacity className="flex flex-row justify-center items-center" onPress={() => router.push("/signin")} >
-                                <Text className="text-white font-semibold">Already a user? {" "}</Text>
-                                <Text className="text-base font-semibold underline text-[#f49b33]">Sign in</Text>
+                            <TouchableOpacity className="flex flex-row justify-center items-center" onPress={() => router.push("/signup")} >
+                                <Text className="text-white font-semibold">New user? {" "}</Text>
+                                <Text className="text-base font-semibold underline text-[#f49b33]">Sign up</Text>
                             </TouchableOpacity>
                             <Text className="text-center text-lg font-semibold my-4 text-white">
                                 <View className="border-b-2 border-[#f49b33] p-2 mb-1 w-24" />{" "}or{" "}
@@ -109,4 +108,4 @@ const Signup = () => {
     );
 };
 
-export default Signup;
+export default Signin;

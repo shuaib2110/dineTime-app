@@ -18,7 +18,7 @@ export default function Index() {
               className="p-2 my-2 bg-[#f49b33] text-black rounded-lg">
               <Text className="text-lg font-semibold text-center">Sign Up</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => router.push('/signup')}
+            <TouchableOpacity onPress={() => router.push('/home')}
               className="p-2 my-2  border border-[#f49b33]  rounded-lg max-w-fit">
               <Text className="text-lg font-semibold text-center text-[#f49b33]">Guest User</Text>
             </TouchableOpacity>
