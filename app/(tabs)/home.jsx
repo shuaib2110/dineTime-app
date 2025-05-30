@@ -6,7 +6,6 @@ import { ActivityIndicator, FlatList, Image, ImageBackground, Platform, ScrollVi
 import { SafeAreaView } from 'react-native-safe-area-context';
 import logo from '../../assets/images/dinetimelogo.png';
 import banner from '../../assets/images/homeBanner.png';
-import uploadData from '../../config/bulkUpload';
 import { db } from '../../config/firebaseConfig';
 
 
@@ -18,7 +17,7 @@ const Home = () => {
 const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
-    uploadData();
+    // uploadData();
   },[]);
 
 

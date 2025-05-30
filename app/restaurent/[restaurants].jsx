@@ -1,17 +1,19 @@
 import { useLocalSearchParams } from 'expo-router';
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Platform, SafeAreaView, ScrollView, Text, View } from 'react-native';
 import { db } from '../../config/firebaseConfig';
 
 
 
-export default function Restaurent() {
+export default function Restaurant() {
     const { restaurants } = useLocalSearchParams();
 
     const [restaurantData, setRestaurantData] = useState(null);
     const [carouselData, setCarouselData] = useState([]);
     const [slotsData, setSlotsData] = useState([]);
+
+
 
 
   const getRestaurantData = async () => {
@@ -65,6 +67,12 @@ export default function Restaurent() {
       console.log("Error fetching data", error);
     }
   };
+
+  useEffect(() => {
+    getRestaurantData();
+  }, []);
+  console.log("1",restaurantData);
+
 
 
     return (
