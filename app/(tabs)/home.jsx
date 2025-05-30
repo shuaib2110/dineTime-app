@@ -1,15 +1,29 @@
 import { BlurView } from 'expo-blur';
+import { useRouter } from 'expo-router';
+import { collection, getDocs, query } from 'firebase/firestore';
+import { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList, Image, ImageBackground, Platform, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import logo from '../../assets/images/dinetimelogo.png';
 import banner from '../../assets/images/homeBanner.png';
-import { restaurants } from '../../store/restaurants';
+import uploadData from '../../config/bulkUpload';
+import { db } from '../../config/firebaseConfig';
 
 
-const home = () => {
+
+
+const Home = () => {
+  const router = useRouter();
+
+const [restaurants, setRestaurants] = useState([]);
+
+  useEffect(() => {
+    uploadData();
+  },[]);
+
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity className="bg-[#5f5f5f] max-h-64 max-w-xs flex justify-center rounded-lg p-4 mx-4 shadow-md">
+    <TouchableOpacity onPress={()=>router.push(`/restaurent/${item.name}`)} className="bg-[#5f5f5f] max-h-64 max-w-xs flex justify-center rounded-lg p-4 mx-4 shadow-md">
       <Image
         source={{ uri: item.image }}
         resizeMode="cover"
@@ -21,6 +35,20 @@ const home = () => {
     </TouchableOpacity>
   )
 
+  const getRestaurants = async () => {
+    const q = query(collection(db, "restaurants"));
+    const res =await getDocs(q);
+
+    res.forEach((item)=>{
+      setRestaurants((prev)=>[...prev, item.data()])
+    })
+  }
+
+
+  useEffect(() => {
+   getRestaurants();
+  }, [])
+  
   return (
     <SafeAreaView style={[{ backgroundColor: "#2b2b2b" }, Platform.OS === "android" && {paddingBottom: 55}, Platform.OS === "ios" && {paddingBottom: 20}]}>
       <View className="flex items-center">
@@ -84,4 +112,4 @@ const home = () => {
   )
 }
 
-export default home
+export default Home;
