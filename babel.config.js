@@ -6,4 +6,8 @@ module.exports = function (api) {
       "nativewind/babel",
     ],
   };
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 9074a00d6abca68eaa3b5abee23472a5a9551d73

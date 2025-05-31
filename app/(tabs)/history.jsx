@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { View, Text, FlatList, Alert, TouchableOpacity } from "react-native";
 import React, { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -97,3 +98,16 @@ const history = () => {
 };
 
 export default history;
+=======
+import { Text, View } from 'react-native'
+
+const history = () => {
+  return (
+    <View>
+      <Text>history</Text>
+    </View>
+  )
+}
+
+export default history
+>>>>>>> 9074a00d6abca68eaa3b5abee23472a5a9551d73

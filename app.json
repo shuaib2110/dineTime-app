@@ -1,10 +1,17 @@
 {
   "expo": {
+<<<<<<< HEAD
     "name": "dine-time-yt",
     "slug": "dine-time-yt",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
+=======
+    "name": "my-app",
+    "slug": "my-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+>>>>>>> 9074a00d6abca68eaa3b5abee23472a5a9551d73
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -15,7 +22,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+<<<<<<< HEAD
       }
+=======
+      },
+      "edgeToEdgeEnabled": true
+>>>>>>> 9074a00d6abca68eaa3b5abee23472a5a9551d73
     },
     "web": {
       "bundler": "metro",

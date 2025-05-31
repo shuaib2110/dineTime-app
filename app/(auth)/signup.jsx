@@ -1,23 +1,22 @@
-import {
-  View,
-  Text,
-  ScrollView,
-  TouchableOpacity,
-  Image,
-  StatusBar,
-  TextInput,
-  Alert,
-} from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
-import React from "react";
+import { doc, getFirestore, setDoc } from "firebase/firestore";
+import { Formik } from "formik";
+import {
+  Alert,
+  Image,
+  ScrollView,
+  StatusBar,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/images/dinetimelogo.png";
-const entryImg = require("../../assets/images/Frame.png");
-import { Formik } from "formik";
 import validationSchema from "../../utils/authSchema";
-import { doc, getFirestore, setDoc } from "firebase/firestore";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+const entryImg = require("../../assets/images/Frame.png");
 const Signup = () => {
   const router = useRouter();
   const auth = getAuth();
