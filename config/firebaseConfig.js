@@ -8,14 +8,15 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "your API key",
-  authDomain: "your-project-name.firebaseapp.com",
-  projectId: "your-project-name",
-  storageBucket: "your-project-name.firebasestorage.app",
-  messagingSenderId: "eer1212",
-  appId: "1:1234:web:1234",
-  measurementId: "G-223",
+  apiKey: "AIzaSyCcpqS_WzAUxD-wa9Wc-g68kYTegOYM8Sk",
+  authDomain: "dine-time-app-dev.firebaseapp.com",
+  projectId: "dine-time-app-dev",
+  storageBucket: "dine-time-app-dev.firebasestorage.app",
+  messagingSenderId: "711040686650",
+  appId: "1:711040686650:web:b0c039718dfad47eaf3303",
+  measurementId: "G-51BP9N73QH"
 };
+
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
